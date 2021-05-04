@@ -742,3 +742,4 @@ void MainWindow::on_actionAutomatic_C_C_control_triggered()
         cpp=0;
     }
 }
+
