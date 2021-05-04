@@ -1,0 +1,20 @@
+<RCC>
+    <qresource prefix="/Images">
+        <file>images/open.png</file>
+        <file>images/save.png</file>
+        <file>images/new.png</file>
+        <file>images/saveas.png</file>
+        <file>images/aouto.png</file>
+        <file>images/selectnone.png</file>
+        <file>images/selectall.png</file>
+        <file>images/paste.png</file>
+        <file>images/cut.png</file>
+        <file>images/copy.png</file>
+	<file>images/icon-font-7.png</file>
+	<file>images/zomm_In.png</file>
+	<file>images/zoom_out.png</file>
+	<file>images/d2.png</file>
+	<file>images/cpp.png</file>
+	<file>images/cpp_Logo.png</file>
+    </qresource>
+</RCC>
