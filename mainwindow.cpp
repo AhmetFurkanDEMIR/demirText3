@@ -99,7 +99,6 @@ void MainWindow::tabSelected(int src, int to){
 
     names.swap(src, to);
     files.swap(src, to);
-    code_color.swap(src, to);
     texts.swap(src, to);
 
 }
@@ -173,7 +172,7 @@ void MainWindow::Text_Write(bool a){
         }
 
         // dosya uzerinde islem var olarak gosterilir
-        else{
+        else if(Automatic_save_control!=1){
             ui->tabWidget->setTabText(ui->tabWidget->currentIndex(), names.at(ui->tabWidget->currentIndex())+" *");
         }
     }
@@ -519,6 +518,8 @@ void MainWindow::on_actionAll_save_triggered()
 // otomatik tum dosyalari guncelleme
 void MainWindow::Automatic_save(){
 
+    qDebug("fds");
+
     if(Automatic_save_control==1 && ui->tabWidget->tabText(0)!="None"){
 
         QFile file(files.at(ui->tabWidget->currentIndex()));
@@ -527,6 +528,7 @@ void MainWindow::Automatic_save(){
         QString temp = texts.at(ui->tabWidget->currentIndex())->toPlainText();
         file.write(qPrintable(temp));
         file.close();
+        ui->tabWidget->setTabText(ui->tabWidget->currentIndex(), names.at(ui->tabWidget->currentIndex()));
 
     }
 
